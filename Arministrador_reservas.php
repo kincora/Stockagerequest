@@ -24,8 +24,10 @@
                 <h1>mePrestas...?</h1>
             </div>
             <div class="row-fluid">
-                <div class="span12" id="formularioCliente"> </div>
-                
+                <div class="span12" id="contenedorTablas">
+                    <div class="table"id="formularioCliente" >                        
+                    </div>
+                </div>           
             </div>
         </div>
      
