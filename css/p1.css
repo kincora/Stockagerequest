@@ -3,6 +3,19 @@
     margin-right: auto;
     display: block;
 }
+
+.divGrupo{
+    border-radius: 5px;  
+    background-color: white;
+    color:black;
+    box-shadow: 0.3em 0.3em #0088cc;
+    padding: 15px;
+}
+
+.tamañoLetraTabla {
+    font-size: 10px;
+}
+
 #cabecera{
     height: 150px;
 }
@@ -26,9 +39,9 @@ body{
 #formulario h2{
     color: white;
 }
-#formularioCliente{
+#tablaCliente{
     border-radius: 10px;
-   
+//Aqui pondremos el tamaño  
     background-color: white;
     box-shadow: 0.3em 0.3em #0088cc;
 }
