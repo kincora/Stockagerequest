@@ -16,40 +16,57 @@
         <?php
         ?>
         
+
         <div id="contenedor" class="container">
             
             <div class="row-fluid centrado" id="cabecera">
                 <h1>Reservas...?</h1>
             </div>
             
-            <div class="row-fluid">
-                
-                <div class="span7" id="contenedorTablas">
-                    <div class="table tamañoLetraTabla table-condensed"id="tablaCliente" >                        
-                    </div>
+            <div class="row-fluid">               
+                <div class="span7 divGrupo" id="contenedorTablas" style="height: 250px;">
+                        <div class="span6"><input name="id" class="input-small" type="text" placeholder="Introduzca ID Producto" style="width:200px;"></div>
+                        <div class="span6"><button id="b1" type="submit" class="btn btn-success btn-block"><i class="icon-search icon-white"></i></button></div>
+                        <div class="table tamañoLetraTabla table-condensed"id="tablaCliente" ></div>
                 </div>
-                
-                <div class="span5 divGrupo" style="height: 200px;"> 
-
-                    <form class="form" action="camposBusqueda.php" method="post">
-                            <input name="dni" type="text" placeholder="Introduzca DNI" style="width:200px;"/>
-                            <button type="submit" class="btn" id="b1">Insertar</button> 
+                    
+                <div class="span5 divGrupo" style="height: 250px;"> 
+                    <form class="form" action="busquedaUsuario.php" method="post">
+                        <div class="span6"><input  name="dni" class="input-small" type="text" placeholder="Introduzca DNI" style="width:200px;"></div>
+                        <div class="span6"><button id="b2" type="submit" class="btn btn-success btn-block"><i class="icon-search icon-white"></i></button></div>
+                        <div class="row-fluid" id="divUsuario"></div>                            
                     </form>
 
                 </div>
-           </div>
+           </div> 
             
-                <div class="row-fluid divGrupo" id="divUsuario"></div> 
-                
+            <div class="row-fluid divGrupo" id="reservar"></div>
+            <div class="row-fluid divGrupo"id="BBDDprestamos" ></div>
+            
         </div>
         
         <script>
             $(document).ready(function(){
-            $('#tablaCliente').load("listaArticulos.php");
-            
-            $('#b1').on('click',function(){
-                 $('#divUsuario').load("camposBusqueda.php");   
-              });              
+              $('#tablaCliente').load("listaArticulos.php");  
+              $('#BBDDprestamos').load("listaPrestamos.php"); 
+              
+              
+              $('#b1').on('click',function(){
+                 var _id = $('#id').val();
+                    if(_id !== ""){
+                        $('#tablaCliente').load("busquedaArticulo.php",{id : _id});
+                            
+                        
+                    }
+              });
+              
+//              $('#b1').on('click',function(){
+//                    $('#tablaCliente').load("busquedaArticulo.php");
+//                });
+//              
+//              $('#b2').on('click',function(){
+//                    $('#divUsuario').load("busquedaUsuario.php");
+//                });          
             });
         </script>
         
