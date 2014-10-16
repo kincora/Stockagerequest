@@ -41,7 +41,8 @@ body{
 }
 #tablaCliente{
     border-radius: 10px;
-//Aqui pondremos el tamaño  
+    height: 200px;
     background-color: white;
     box-shadow: 0.3em 0.3em #0088cc;
+    overflow-y: scroll;
 }

@@ -14,64 +14,42 @@
     </head>
     <body>
         <?php
-//        $conexion = new mysqli('localhost', 'root', '', 'test');
-//        $consulta = $conexion -> query("Set names utf8");
-//        $consulta = $conexion -> query("SELECT * FROM articulos"); 
         ?>
         
         <div id="contenedor" class="container">
             
             <div class="row-fluid centrado" id="cabecera">
-                <h1>mePrestas...?</h1>
+                <h1>Reservas...?</h1>
             </div>
             
             <div class="row-fluid">
+                
                 <div class="span7" id="contenedorTablas">
                     <div class="table tamañoLetraTabla table-condensed"id="tablaCliente" >                        
                     </div>
-                </div>  
-                <div class="span5 divGrupo">
-                    <form class="form-search" action="camposBusqueda.php" method="post">
-                        <div class="input-prepend">
-                            <button type="submit" class="btn" id="b1">Buscar</button>
-                            <input id="d" type="text" placeholder="Busque por DNI" class="span2 search-query" style="width:200px;">
-                        </div><br>
-                        <div class="input-prepend">
-                            <button type="submit" class="btn" id="b2">Buscar</button>
-                            <input id="d" type="text" placeholder="Busque por NOMBRE" class="span2 search-query" style="width:200px;">
-                        </div><br>
-                        <div class="input-prepend">
-                            <button type="submit" class="btn" id="b2">Buscar</button>
-                            <input id="d" type="text" placeholder="Busque por APELLIDO" class="span2 search-query" style="width:200px;">
-                        </div>
-                    </form
-                    
-                    <div class="row-fluid" id="resultadoBusqueda">
-                        
-                    </div>
-                    
                 </div>
-            </div>
+                
+                <div class="span5 divGrupo" style="height: 200px;"> 
+
+                    <form class="form" action="camposBusqueda.php" method="post">
+                            <input name="dni" type="text" placeholder="Introduzca DNI" style="width:200px;"/>
+                            <button type="submit" class="btn" id="b1">Insertar</button> 
+                    </form>
+
+                </div>
+           </div>
             
-            <div class="row-fluid" id="contenedorBuscadores">
-                <div class="row-fluid divGrupo">
-                    
-                    
-                    
-                    
-                </div>              
-            </div>
-            
+                <div class="row-fluid divGrupo" id="divUsuario"></div> 
+                
         </div>
-     
         
         <script>
             $(document).ready(function(){
-                $('#tablaCliente').load("listaArticulos.php");
-                $('#camposBusqueda').load("camposBusqueda.php");
-                $('#resultadoBusqueda').load("resultadoBusqueda.php");
-                
-                
+            $('#tablaCliente').load("listaArticulos.php");
+            
+            $('#b1').on('click',function(){
+                 $('#divUsuario').load("camposBusqueda.php");   
+              });              
             });
         </script>
         
