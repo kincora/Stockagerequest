@@ -40,9 +40,16 @@ body{
 #formulario h2{
     color: white;
 }
-#tablaCliente{
+#tablaArticulos{
 /*    border-radius: 10px;*/
-    height: 150px;
+    height: 180px;
+    background-color: white;
+/*    box-shadow: 0.3em 0.3em #0088cc;*/
+    overflow-y: scroll;
+}
+#tablaUsuarios{
+/*    border-radius: 10px;*/
+    height: 180px;
     background-color: white;
 /*    box-shadow: 0.3em 0.3em #0088cc;*/
     overflow-y: scroll;

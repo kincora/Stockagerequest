@@ -1,7 +1,6 @@
+
+
 <?php
-
-
-
 $conexion = new mysqli('localhost', 'root', '', 'test');
 $consulta = $conexion-> query ("Set names utf8");
 $consulta = $conexion-> query ("SELECT * FROM articulos ");

@@ -24,31 +24,40 @@
             </div>
             
             <div class="row-fluid">               
-                <div class="span7 divGrupo" id="contenedorTablas" style="height: 250px;">
+                <div class="span6 divGrupo" style="height: 350px;">
+                    <legend>ARTÍCULOS</legend>
+                    <div class="row-fluid">
                         <div class="span6"><input name="id" class="input-small" type="text" placeholder="Introduzca ID Producto" style="width:200px;"></div>
-                        <div class="span6"><button id="b1" type="submit" class="btn btn-success btn-block"><i class="icon-search icon-white"></i></button></div>
-                        <div class="table tamañoLetraTabla table-condensed"id="tablaCliente" ></div>
+                        <div class="span6"><button id="b1" type="submit" class="btn btn-success btn-block"><i class="icon-search icon-white"></i></button></div> 
+                    </div>
+                      
+                        <div class="table tamañoLetraTabla table-condensed"id="tablaArticulos" ></div>
                 </div>
                     
-                <div class="span5 divGrupo" style="height: 250px;"> 
-                    <form class="form" action="busquedaUsuario.php" method="post">
+                <div class="span6 divGrupo" style="height: 350px;">
+                    <legend>CLIENTES</legend>
+                    <div class="row-fluid">                  
                         <div class="span6"><input  name="dni" class="input-small" type="text" placeholder="Introduzca DNI" style="width:200px;"></div>
                         <div class="span6"><button id="b2" type="submit" class="btn btn-success btn-block"><i class="icon-search icon-white"></i></button></div>
-                        <div class="row-fluid" id="divUsuario"></div>                            
-                    </form>
-
+                    </div>
+                        <div class="table tamañoLetraTabla table-condensed"id="tablaUsuarios" ></div>                            
                 </div>
            </div> 
             
-            <div class="row-fluid divGrupo" id="reservar"></div>
+            <div class="row-fluid divGrupo" id="reservar">
+
+            </div>
             <div class="row-fluid divGrupo"id="BBDDprestamos" ></div>
             
         </div>
         
         <script>
             $(document).ready(function(){
-              $('#tablaCliente').load("listaArticulos.php");  
+              $('#tablaArticulos').load("listaArticulos.php");  
+              $('#tablaUsuarios').load("listaUsuarios.php");  
               $('#BBDDprestamos').load("listaPrestamos.php"); 
+              $('#reservar').load("insercionPrestamo.php"); 
+              
               
               
               $('#b1').on('click',function(){
