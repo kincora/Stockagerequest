@@ -14,11 +14,11 @@ if (isset($_POST['id'])) {
     $id = "";
 }
 
-/////// CREAMOS LAS QUERYS ////////////////////////////////////////////////////
-$usuario = $conexion ->query("select * from articulos where (ID = '$id')");
-///////////////////////////////////////////////////////////////////////////////////
+/////// CREAMOS LAS QUERYS /////////////////////////////////////////////////////
+$producto = $conexion ->query("select * from articulos where (ID = '$id')");
+////////////////////////////////////////////////////////////////////////////////
 echo '<table class="table table-striped table-bordered tamañoLetraTabla table-condensed">';
-if($usuario){
+if($producto){
             echo '<thead>';
                 echo'<tr>';
                 echo'<th>ID</th>';
@@ -29,7 +29,7 @@ if($usuario){
             echo'</thead>';
             
 
-  while ($fila = $usuario->fetch_assoc()){
+  while ($fila = $producto->fetch_assoc()){
   echo '<tr>';
     echo '<td>'.$fila["ID"].'</td>';
     echo '<td>'.$fila["Num_Serie"].'</td>';
