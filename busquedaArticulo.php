@@ -17,7 +17,6 @@ if (isset($_POST['id'])) {
 /////// CREAMOS LAS QUERYS ////////////////////////////////////////////////////
 $usuario = $conexion ->query("select * from articulos where (ID = '$id')");
 ///////////////////////////////////////////////////////////////////////////////////
-
 echo '<table class="table table-striped table-bordered tamañoLetraTabla table-condensed">';
 if($usuario){
             echo '<thead>';
@@ -39,7 +38,5 @@ if($usuario){
   echo '</tr>';  
     }     
 }             
- 
 echo '</table>';
 ?>
-

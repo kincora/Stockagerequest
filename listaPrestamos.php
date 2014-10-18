@@ -6,15 +6,16 @@ $conexion = new mysqli('localhost', 'root', '', 'test');
 $consulta = $conexion-> query ("Set names utf8");
 $consulta = $conexion-> query ("SELECT * FROM prestamo ");
 
+echo'<legend>PRÉSTAMOS</legend>';
 echo '<table class="table table-striped table-bordered">';
 
             echo '<thead>';
                 echo'<tr>';
-                echo'<th>ID PRESTAMO</th>';
+                echo'<th>ID PRÉSTAMO</th>';
                 echo'<th>ARTÍCULO</th>';
                 echo'<th>USUARIO</th>';
                 echo'<th>FECHA RESERVA</th>';
-                echo'<th>FECHA DEVOLUCIÓ</th>';
+                echo'<th>FECHA DEVOLUCIÓN</th>';
                 echo'</tr>';
             echo'</thead>';
               
