@@ -55,3 +55,11 @@ body{
     overflow-y: scroll;
 }
 
+#tablaReservas{
+/*    border-radius: 10px;*/
+    height: 250px;
+    background-color: white;
+/*    box-shadow: 0.3em 0.3em #0088cc;*/
+    overflow-y: scroll;
+    margin-bottom: 100px;
+}
